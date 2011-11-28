@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Orion Demo for Eclipse day at the Gogoleplex</title>
+<style>
+body {
+ font-family:Verdana,Geneva,sans-serif;
+ margin-left: 1em;
+}
+</style>
+</head>
+<body>
+<h1>Orion Web-Based Development</h1>
+<h2>Who</h2>
+<li>Do you develop applications to run in a browser?</li>
+<li>Do you use a browser to develop those applications? </li>
+<li><em>Orion is a Web based system for developing Web based systems.</em></li>
+</ul>
+<h2>What</h2>
+<li>JavaScript editor written in JavaScript</li>
+<li>JavaScript/HTML/CSS based client</li>
+<li>Java (<em>Eclipse</em>) Web server with REST API</li>
+<li><em>git</em> for version control and backup</li>
+</ul>
+ 
+
+<h2>Installation Options</h2>
+<ol>
+<li>Don't: <a href="http://orionhub.org">Just use orionhub.org</a></li>
+<li>localhost: <a href="http://download.eclipse.org/orion/">Install server</a>, then open <a href="http://localhost:8080">http://localhost:8080</a></li>
+<li>Department or group server, etc.</li>
+</ol>
+<p>Since <em>git</em> provides distributed backup, you don't really need to a fancy server system</p>
+
+<h2>User Interface Overview</h2>
+<ul>
+<li>Login (localhost: you can use a simple login)</li>
+<li><a href="http://localhost:8080">Home Page</a></li>
+<li><a href="http://localhost:8080/git/git-clone.html">Repositories</a>: Use <code>http</code> <em>git</em> URL in <code>Clone Repository</code> </li>
+<li><a href="http://localhost:8080/git/git-status.html#/gitapi/status/file/A/">git status</a>: Dedicate a browser tab to this one </li>
+<li><a href="http://localhost:8080/navigate/table.html#">Navigator/Project tree</a>: Do It Right (Click) </li>
+<li><a href="http://localhost:8080/edit/edit.html#/file/A/nonymousOutliner.js">Editor</a>: feels like <em>Eclipse</em> on a starvation diet</li>
+<li>Plugins, eg Nonymous, can extend/change UI</li>
+</ul>
+<h2>Plugins</h2>
+<ul>
+<li>URLs for registration in <a href="http://localhost:8080/plugin/list.html">Plugins</a> page</li>
+<li>Implemented as Web Pages installed in iframes, </li>
+<li>eg <a href="http://localhost:8080/edit/edit.html#/file/A/nonymousPlugin.html">NonymousPlugin.html</a></li>
+</ul>
+<h2>Workflow</h2>
+<ul>
+<li><a href="http://localhost:8080/git/git-status.html#/gitapi/status/file/A/">git status page</a> to fetch/merge from remote repo.</li>
+<li><a href="http://localhost:8080/navigate/table.html#/file/A/?depth=1">project navigator page</a> to open test page</li>
+<li><a href="http://localhost:8080/navigate/table.html#/file/A/?depth=1">project navigator page</a> to open file</li>
+<li>edit</li>
+<li><a href="http://localhost:8080/git/git-status.html#/gitapi/status/file/A/">git status page</a> to commit, push changes.</li>
+</ul>
+</body>
+</html>
