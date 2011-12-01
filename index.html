@@ -1,93 +1,69 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>johnjbarton/OrionDemo @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #eaf587;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #150a78; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #150a78; }
-    h3 { text-align: center; color: #150a78; }
-    a { color: #150a78; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+<title>Orion Demo for Eclipse day at the Gogoleplex</title>
+<style>
+body {
+ font-family:Verdana,Geneva,sans-serif;
+ margin-left: 1em;
+}
+</style>
+<script src="demo.js"></script>
 </head>
-
 <body>
-  <a href="https://github.com/johnjbarton/OrionDemo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<h1>Orion Web-Based Development</h1>
+<h2>Who</h2>
+<li>Do you develop applications to run in a browser?</li>
+<li>Do you use a browser to develop those applications? </li>
+<li>Orion: a Web based system for developing Web based systems.</em></li>
+<li><em>Orion is an AJAX Web App from the github era</em></li>
+</ul>
+<h2>What</h2>
+<li>JavaScript editor written in JavaScript</li>
+<li>JavaScript/HTML/CSS based client</li>
+<li>Java (<em>Eclipse</em>) Web server with REST API</li>
+<li><em>git</em> for version control and backup</li>
+</ul>
+ 
 
-  <div id="container">
+<h2>Installation Options</h2>
+<ol>
+<li>Don't: <a target="_blank" href="http://orionhub.org">Just use orionhub.org</a></li>
+<li>localhost: <a target="_blank" href="http://download.eclipse.org/orion/">Install server</a>, then open <a target="_blank" href="http://localhost:8080">http://localhost:8080</a></li>
+<li>Department or group server, etc.</li>
+</ol>
+<p>Since <em>git</em> provides distributed backup, you don't really need to a fancy server system</p>
 
-    <div class="download">
-      <a href="https://github.com/johnjbarton/OrionDemo/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/johnjbarton/OrionDemo/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/johnjbarton/OrionDemo">OrionDemo</a>
-      <span class="small">by <a href="https://github.com/johnjbarton">johnjbarton</a></span></h1>
-
-    <div class="description">
-      Simple overview of Orion
-    </div>
-
-    
-      <p>Just the slides I used for the Eclipse day at Googleplex</p>
-    
-
-    
-
-    
-
-    
-      <h2>License</h2>
-      <p>Google BSD</p>
-    
-
-    
-      <h2>Authors</h2>
-      <p>johnjbarton (johnjbarton@johnjbarton.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>johnjbarton (johnjbarton@johnjbarton.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/johnjbarton/OrionDemo/zipball/master">zip</a> or
-      <a href="https://github.com/johnjbarton/OrionDemo/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/johnjbarton/OrionDemo</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/johnjbarton/OrionDemo">johnjbarton/OrionDemo</a>
-    </div>
-
-  </div>
-
+<h2>User Interface Overview</h2>
+<ul>
+<li>Login (localhost: you can use a simple login)</li>
+<li><a target="_blank" href="http://localhost:8080">Home Page</a></li>
+<li><a target="_blank" href="http://localhost:8080/git/git-clone.html">Repositories</a>: Use <code>http</code> <em>git</em> URL in <code>Clone Repository</code> </li>
+<li><a target="_blank" href="http://localhost:8080/git/git-status.html#/gitapi/status/file/b/">git status</a>: Dedicate a browser tab to this one </li>
+<li><a target="_blank" href="http://localhost:8080/navigate/table.html#">Navigator/Project tree</a>: Do It Right (Click) </li>
+<li><a target="_blank" href="http://localhost:8080/edit/edit.html#/file/b/nonymousOutliner.js">Editor</a>: feels like <em>Eclipse</em> on a starvation diet</li>
+<li>Plugins, eg Nonymous, can extend/change UI</li>
+</ul>
+<h2>Plugins</h2>
+<ul>
+<li>URLs for registration in <a target="_blank" href="http://localhost:8080/plugin/list.html">Plugins</a> page</li>
+<li>Implemented as Web Pages installed in iframes, </li>
+<li>eg <a target="_blank" href="http://localhost:8080/edit/edit.html#/file/b/nonymousPlugin.html">NonymousPlugin.html</a></li>
+</ul>
+<h2>Workflow</h2>
+<ul>
+<li><a target="_blank" href="http://localhost:8080/git/git-status.html#/gitapi/status/file/b/">git status page</a> to fetch/merge from remote repo.</li>
+<li><a target="_blank" href="http://localhost:8080/navigate/table.html#/file/b/?depth=1">project navigator page</a> to open test page</li>
+<li><a target="_blank" href="http://localhost:8080/navigate/table.html#/file/b/?depth=1">project navigator page</a> to open file</li>
+<li>edit</li>
+<li><a target="_blank" href="http://localhost:8080/git/git-status.html#/gitapi/status/file/b/">git status page</a> to commit, push changes.</li>
+</ul>
+<h2>Future Directions for Orion</h2>
+<ul>
+<li>0.4, 0.5, ...</li>
+<li>Orion Editor built into Firefox</li>
+<li>Editor and REST API used in <span style="color:purple">Purple</span></li>
+<li>Investigating small integration with Chrome Devtools</li>
+</li>
+<h2>The End</h2>
 </body>
 </html>
